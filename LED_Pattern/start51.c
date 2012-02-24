@@ -7,7 +7,7 @@ main()
 {
  for (;;)
  {
-  led_blinking();
+  led_blinking();	// Testing LEDs
  }
 
  return(0);
