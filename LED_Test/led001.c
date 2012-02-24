@@ -4,7 +4,7 @@ main()
 {
  unsigned char p;
 
- p=6;
+ p=10;
  for (;;)
  {
   P1=p++;
