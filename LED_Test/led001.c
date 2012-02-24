@@ -2,14 +2,12 @@
 
 main()
 {
- unsigned char p, q;
+ unsigned char p;
 
- q=5;
  p=10;
 
  for (;;)
  {
   P1=p++; 	// Try this out...
-  p+=q;
  }
 }
