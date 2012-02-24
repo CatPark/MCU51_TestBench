@@ -10,5 +10,5 @@ main()
   led_blinking();	// Testing LEDs
  }
 
- return(0);
+ return(1);
 }
