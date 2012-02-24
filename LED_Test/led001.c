@@ -4,8 +4,8 @@ main()
 {
  unsigned char p, q;
 
+ q=5;
  p=10;
- q=2;
 
  for (;;)
  {
@@ -13,5 +13,8 @@ main()
   p+=q;
 
   q++;		// add one more line...
+  
+  p+=q;
+  P1=p++;
  }
 }
