@@ -11,10 +11,5 @@ main()
  {
   P1=p++; 	// Try this out...
   p+=q;
-
-  q++;		// add one more line...
-  
-  p+=q;
-  P1=p++;
  }
 }
