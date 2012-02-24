@@ -9,7 +9,9 @@ main()
 
  for (;;)
  {
-  P1=p++;
+  P1=p++; 	// Try this out...
   p+=q;
+
+  q++;		// add one more line...
  }
 }
