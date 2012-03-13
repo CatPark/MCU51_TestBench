@@ -1,7 +1,5 @@
 #include <REGX52.H>
 
-/* Git test 01 - add this line for Git testing */
-
 void delay();
 
 void main()
