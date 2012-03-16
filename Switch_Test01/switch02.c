@@ -42,7 +42,25 @@ void switch02_loop(void)
 #ifdef DEBUG
   P0 = key;	 					/* Debug only */
 #else
-  if (key != 0) P0=0x00;		/* K8 pressed, turn LEDs on  */
-  else P0=0xFF;					/* K8 not pressed,   LED off */
+  if ((port_in & 0x80) != 0)		/* K8 is pressed */
+  {
+   P0=0x3F;
+  }
+  else if ((port_in & 0x40) != 0)	/* K7 is pressed */
+  {
+   P0=0xCF;
+  }
+  else if ((port_in & 0x20) != 0)	/* K6 is pressed */
+  {
+   P0=0xF3;
+  }
+  else if ((port_in & 0x10) != 0)	/* K5 is pressed */
+  {
+   P0=0xFC;
+  }
+  else
+  {
+   P0=0xFF;
+  }
 #endif
 }
