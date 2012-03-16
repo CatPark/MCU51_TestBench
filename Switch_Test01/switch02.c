@@ -42,21 +42,27 @@ void switch02_loop(void)
 #ifdef DEBUG
   P0 = key;	 					/* Debug only */
 #else
-  if ((port_in & 0x80) != 0)		/* K8 is pressed */
+  if ((port_in & 0xF0) != 0)		/* Any K5 - K8 is pressed 1111 xxxx */
   {
-   P0=0x3F;
-  }
-  else if ((port_in & 0x40) != 0)	/* K7 is pressed */
-  {
-   P0=0xCF;
-  }
-  else if ((port_in & 0x20) != 0)	/* K6 is pressed */
-  {
-   P0=0xF3;
-  }
-  else if ((port_in & 0x10) != 0)	/* K5 is pressed */
-  {
-   P0=0xFC;
+	  if ((port_in & 0x80) != 0)	/* K8 is pressed */
+	  {
+	   P0=0x3F;
+	  }
+	  
+	  if ((port_in & 0x40) != 0)	/* K7 is pressed */
+	  {
+	   P0=0xCF;
+	  }
+	  
+	  if ((port_in & 0x20) != 0)	/* K6 is pressed */
+	  {
+	   P0=0xF3;
+	  }
+	  
+	  if ((port_in & 0x10) != 0)	/* K5 is pressed */
+	  {
+	   P0=0xFC;
+	  }
   }
   else
   {
