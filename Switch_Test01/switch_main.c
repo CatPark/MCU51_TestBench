@@ -3,12 +3,15 @@
 void switch01_init(void);
 void switch01_loop(void);
 
+void switch02_init(void);
+void switch02_loop(void);
+
 void main()
 {
- switch01_init();
+ switch02_init();
 
  for (;;)
  {
-  switch01_loop();
+  switch02_loop();
  }
 }
