@@ -1,17 +1,18 @@
 #include <STC89.H>
 
 #define	DEBUG
+#undef	DEBUG
 
-main()
+void switch01_init(void)
+{
+ P0=0xFF;		/* Turn off all P0 LEDs */
+ P1=0xFF;		/* Prepare to get standalone switches K5 to K8 */
+}
+
+void switch01_loop(void)
 {
  unsigned char port_in, key;
 
- P0=0xFF;		/* Turn off all P0 LEDs */
-
- P1=0xFF;		/* Prepare to get standalone switches K5 to K8 */
-
- for (;;)
- {
   port_in = P1;					/* Read P1 to detect switch status */
 
   /* Key on is to set port pin level to 0
@@ -43,6 +44,5 @@ main()
 #else
   if (key != 0) P0=0x00;		/* K8 pressed, turn LEDs on  */
   else P0=0xFF;					/* K8 not pressed,   LED off */
-#endif	
- }
+#endif
 }
