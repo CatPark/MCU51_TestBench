@@ -46,22 +46,22 @@ void switch02_loop(void)
   {
 	  if ((port_in & 0x80) != 0)	/* K8 is pressed */
 	  {
-	   P0=0x3F;
+	   P0=0x3F;						/* 0011 1111 */						
 	  }
 	  
 	  if ((port_in & 0x40) != 0)	/* K7 is pressed */
 	  {
-	   P0=0xCF;
+	   P0=0xCF;			 			/* 1100 1111 */
 	  }
 	  
 	  if ((port_in & 0x20) != 0)	/* K6 is pressed */
 	  {
-	   P0=0xF3;
+	   P0=0xF3;				  		/* 1111 0011 */
 	  }
 	  
 	  if ((port_in & 0x10) != 0)	/* K5 is pressed */
 	  {
-	   P0=0xFC;
+	   P0=0xFC;					   	/* 1111 1100 */
 	  }
   }
   else
