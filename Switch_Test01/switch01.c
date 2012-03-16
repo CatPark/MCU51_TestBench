@@ -41,8 +41,8 @@ main()
 #ifdef DEBUG
   P0 = key;	 					/* Debug only */
 #else
-  if (key != 0) zz=0x00;		/* K8 pressed, turn LEDs on  */
-  else zz=0xFF;					/* K8 not pressed,   LED off */
+  if (key != 0) P0=0x00;		/* K8 pressed, turn LEDs on  */
+  else P0=0xFF;					/* K8 not pressed,   LED off */
 #endif	
  }
 }
