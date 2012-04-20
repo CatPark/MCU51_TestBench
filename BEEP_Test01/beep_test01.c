@@ -39,8 +39,8 @@ void InitTimer0(void)
 	TR0  = 0;			// Stop Timer
 	TF0	 = 0;			// Reset Overflow
     TMOD = 0x01; 		// Set Timer0 to Mode 1 (1 shot)
-    TH0 = 0x00; 		// Delay time counter delay about 65536us=66ms
-    TL0 = 0x01;
+    TH0 = 0xA0; 		// Delay time counter delay
+    TL0 = 0x00;
     EA = 1;
     ET0 = 1;
     TR0 = 1;	  		// Start Timer
@@ -48,8 +48,14 @@ void InitTimer0(void)
 
 void ISR_Timer0(void) interrupt 1 using 2	// Timer Interrupt Service Routine
 {
-   P0 = ~P0;
-   InitTimer0();	   // Reste Timer
+   TR0 = 0;				// Stop Timer - Protection: NO MORE INTERRUPT
+
+   TH0 = 0xA0;	   		// Rest timer delay time	
+   TL0 = 0x00;
+
+   P0  = ~P0;
+
+   TR0 = 1;				// Start Timer - Enable Interrupt again before quit
 }
 
 void main()
