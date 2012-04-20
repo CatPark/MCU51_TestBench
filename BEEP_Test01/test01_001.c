@@ -2,24 +2,27 @@
 
 sbit BEEP=P3^6;
 sbit L00=P0^0;
-
  void delayst(unsigned int i)
  {
-  	unsigned int j;
+ 	unsigned int j;
+
 	for(;i>0;i--)
- 	for(j=0;j<31;j++);
-	{;}
+ 	for(j=0;j<31;j++)
+
+ 	{;}
  }
 
  void delay(unsigned int i)
  {
-  	unsigned int j;
-	for(;i>0;i--)
- 	for(j=0;j<125;j++);
-	{;}
+ 	unsigned int j;
+
+ 	for(;i>0;i--)
+ 	for (j=0;j<125;j++)
+
+ 	{;}
  }
 
-void beep01(void)
+void main()
 {
 	unsigned int j;
 	while(1)
@@ -34,9 +37,4 @@ void beep01(void)
 		BEEP=1;
 		delay(500);
 	}
-}
-
-void main()
-{
-  beep01();
 }
