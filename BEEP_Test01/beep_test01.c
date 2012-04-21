@@ -3,7 +3,9 @@
 sbit BEEP=P3^6;
 sbit L00=P0^0;
 
- void delayst(unsigned int i)
+int beepcount=0;			// Global variable
+
+void delayst(unsigned int i)
  {
   	unsigned int j;
 	for(;i>0;i--)
@@ -11,7 +13,7 @@ sbit L00=P0^0;
 	{;}
  }
 
- void delay(unsigned int i)
+void delay(unsigned int i)
  {
   	unsigned int j;
 	for(;i>0;i--)
@@ -41,10 +43,10 @@ void InitTimer0(void)
     TMOD = 0x01; 		// Set Timer0 to Mode 1 (1 shot)
     TH0 = 0xA0; 		// Delay time counter delay
     TL0 = 0x00;
-    EA = 1;
-    ET0 = 1;
+    EA = 1;				// Enable Interrupt
+    ET0 = 1;			// Enable Timer0 Interrupt
     TR0 = 1;	  		// Start Timer
-}
+} /* InitTimer0() */
 
 void ISR_Timer0(void) interrupt 1 using 2	// Timer Interrupt Service Routine
 {
@@ -53,15 +55,23 @@ void ISR_Timer0(void) interrupt 1 using 2	// Timer Interrupt Service Routine
    TH0 = 0xA0;	   		// Rest timer delay time	
    TL0 = 0x00;
 
-   P0  = ~P0;
+   //P0  = ~P0;
+   
+   if (beepcount > 999) P0 = 0x00;
+   else P0 =0xFF;
 
    TR0 = 1;				// Start Timer - Enable Interrupt again before quit
-}
+} /* ISR_Timer0() */
 
 void main()
 {
   P0 = 0x00;
   InitTimer0();			// Start Timer
 
-  for(;;) beep01();
+  for(;;beepcount++) 
+  {
+   beep01();
+   if (beepcount > 1000) beepcount = 0;
+  }
 }
+
