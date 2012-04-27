@@ -44,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>Sw001</OutputName>
+          <OutputName>Sw002</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -348,9 +348,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Sw001.c</FileName>
+              <FileName>Sw002.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Sw001.c</FilePath>
+              <FilePath>.\Sw002.c</FilePath>
             </File>
           </Files>
         </Group>
