@@ -5,7 +5,7 @@
    RICHMCU - for RichMCU Development Board
    XT100   - for XT100   Development Board
 ********************************************/
-#define		XT100
+#define		RICHMCU
 
 #ifdef		RICHMCU
 #define		PORT_LED	P0
@@ -42,8 +42,8 @@ char led(char a)
 
 void main(void)
 {
-	unsigned int sw;
-	char		 n;
+	char sw;
+	char n;
 	char lut[4][2]={{SW1, PTN1}, {SW2, PTN2}, {SW3, PTN3}, {SW4, PTN4}};
 			
  	PORT_SW=0xFF;
@@ -54,7 +54,10 @@ void main(void)
 
 		for (n=0; n< 3; n++)
 		{
-		 if (sw == lut[n][0]) PORT_LED=led(lut[n][1]);
+		 if (sw == lut[n][0]) 
+		 {
+		 	PORT_LED=led(lut[n][1]);
+		 }
 		 else PORT_LED=led(0);
 		}
 	}
