@@ -42,7 +42,7 @@ char led(char a)
 
 void main(void)
 {
-	unsigned int sw;
+	unsigned int sw;    /* Ms: This should be a 'char' type */
 	char		 n;
 	char lut[4][2]={{SW1, PTN1}, {SW2, PTN2}, {SW3, PTN3}, {SW4, PTN4}};
 			
