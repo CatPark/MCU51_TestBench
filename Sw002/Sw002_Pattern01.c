@@ -26,23 +26,23 @@ void delay(unsigned int t)
 
 void led_loop(void)
 {			
-		unsigned int t=10000;
+	unsigned int t=10000;
 
-		P0=0x7F;
- 		delay(t);
-		P0=0xBF;
-		delay(t);
-		P0=0xDF;
-		delay(t);
-		P0=0xF7;
-		delay(t);
-		P0=0xFB;
-		delay(t);
-		P0=0xFD;
-		delay(t);
-		P0=0xFE;
-		delay(t);
-		P0=0xFF;
-		delay(t);
+	P0=0x7F;
+ 	delay(t);
+	P0=0xBF;
+	delay(t);
+	P0=0xDF;
+	delay(t);
+	P0=0xF7;
+	delay(t);
+	P0=0xFB;
+	delay(t);
+	P0=0xFD;
+	delay(t);
+	P0=0xFE;
+	delay(t);
+	P0=0xFF;
+	delay(t);
 }
 
