@@ -1,8 +1,7 @@
 #include <REGX52.H>
 
-void delay(int t);
+void delay(unsigned int t);
 void led_loop(void);
-char led(unsigned int n);
 
 void main(void)
 {	
@@ -11,7 +10,7 @@ void main(void)
 
 	for(;;)
 	{
-	 	int a;
+	 	char a;
 		a = P1;	 
 		a = a & 0xF0;
 
@@ -19,36 +18,31 @@ void main(void)
 	}
 }
 
-char led(unsigned int n)
+void delay(unsigned int t)
 {
- return n;
-}
-
-void delay(int t)
-{
- 	int x;
+ 	unsigned int x;
  	for(x=0;x<t;x++);
 }
 
 void led_loop(void)
 {			
-		int t=10000;
+		unsigned int t=10000;
 
-		P0=led(0x7F);
+		P0=0x7F;
  		delay(t);
-		P0=led(0xBF);
+		P0=0xBF;
 		delay(t);
-		P0=led(0xDF);
+		P0=0xDF;
 		delay(t);
-		P0=led(0xF7);
+		P0=0xF7;
 		delay(t);
-		P0=led(0xFB);
+		P0=0xFB;
 		delay(t);
-		P0=led(0xFD);
+		P0=0xFD;
 		delay(t);
-		P0=led(0xFE);
+		P0=0xFE;
 		delay(t);
-		P0=led(0xFF);
+		P0=0xFF;
 		delay(t);
 }
 
