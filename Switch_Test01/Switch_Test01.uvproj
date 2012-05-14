@@ -357,6 +357,11 @@
               <FileType>1</FileType>
               <FilePath>.\switch_main.c</FilePath>
             </File>
+            <File>
+              <FileName>switch02.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\switch02.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
