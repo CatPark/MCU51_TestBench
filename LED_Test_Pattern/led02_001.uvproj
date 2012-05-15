@@ -350,12 +350,12 @@
             <File>
               <FileName>led02_001_pattern.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Sources\led02\led02_001_pattern.c</FilePath>
+              <FilePath>.\led02_001_pattern.c</FilePath>
             </File>
             <File>
               <FileName>led02_001_start51.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Sources\led02\led02_001_start51.c</FilePath>
+              <FilePath>.\led02_001_start51.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -363,14 +363,14 @@
           <GroupName>libray</GroupName>
           <Files>
             <File>
-              <FileName>led02_001_io.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Sources\led02\led02_001_io.c</FilePath>
-            </File>
-            <File>
               <FileName>led02_001_timing.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Sources\led02\led02_001_timing.c</FilePath>
+              <FilePath>.\led02_001_timing.c</FilePath>
+            </File>
+            <File>
+              <FileName>led02_001_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\led02_001_io.c</FilePath>
             </File>
           </Files>
         </Group>

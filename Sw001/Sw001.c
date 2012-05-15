@@ -5,7 +5,7 @@
    RICHMCU - for RichMCU Development Board
    XT100   - for XT100   Development Board
 ********************************************/
-#define		RICHMCU
+#define		XT100
 
 #ifdef		RICHMCU
 #define		PORT_LED	P0
