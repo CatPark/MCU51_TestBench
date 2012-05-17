@@ -44,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\Output\</OutputDirectory>
-          <OutputName>Switch_Test01</OutputName>
+          <OutputName>EP002</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -348,19 +348,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>switch01.c</FileName>
+              <FileName>EP002.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\switch01.c</FilePath>
-            </File>
-            <File>
-              <FileName>switch_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\switch_main.c</FilePath>
-            </File>
-            <File>
-              <FileName>switch02.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\switch02.c</FilePath>
+              <FilePath>.\EP002.c</FilePath>
             </File>
           </Files>
         </Group>
